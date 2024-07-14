@@ -9,6 +9,44 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        sk_sl: sk_sl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT &sl 1>;
+            label = "SK_SL";
+        };
+    };
+
+    behaviors {
+        quad: quad {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QUAD";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
+
+        lthumb_l: lthumb_l {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LTHUMB_L";
+            #binding-cells = <0>;
+            bindings = <&sk_mo 1 LEFT_SHIFT>, <&sk_sl>;
+        };
+
+        sk_mo: sk_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_MO";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +59,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB           &kp X  &kp W  &kp M           &kp G  &kp J        &kp HASH   &kp PERIOD  &kp SLASH  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp BSPC
-&mt LCTRL ESCAPE  &kp S  &kp C  &kp N           &kp T  &kp K        &kp COMMA  &kp A       &kp E      &kp I              &kp H             &kp SQT
-&kp LSHFT         &kp B  &kp P  &kp L           &kp D  &kp V        &kp MINUS  &kp U       &kp O      &kp Y              &kp F             &kp ESC
-                                &sk LEFT_SHIFT  &kp R  &kp SPACE    &kp RET    &mo 2       &kp RALT
+&kp TAB           &kp X  &kp W  &kp M      &kp G  &kp J          &kp HASH   &kp PERIOD  &kp SLASH  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp BSPC
+&mt LCTRL ESCAPE  &kp S  &kp C  &kp N      &kp T  &kp K          &kp COMMA  &kp A       &kp E      &kp I              &kp H             &kp SQT
+&kp LSHFT         &kp B  &kp P  &kp L      &kp D  &kp V          &kp MINUS  &kp U       &kp O      &kp Y              &kp F             &kp ESC
+                                &lthumb_l  &kp R  &lt 2 SPACE    &kp RET    &mo 2       &kp RALT
             >;
         };
 
