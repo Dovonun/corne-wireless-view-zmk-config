@@ -36,23 +36,6 @@
     };
 
     behaviors {
-        quad: quad {
-            compatible = "zmk,behavior-hold-tap";
-            label = "QUAD";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        };
-
-        lthumb_l: lthumb_l {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LTHUMB_L";
-            #binding-cells = <0>;
-            bindings = <&sk_mo 1 LEFT_SHIFT>, <&sk_sl>;
-        };
-
         sk_mo: sk_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "SK_MO";
