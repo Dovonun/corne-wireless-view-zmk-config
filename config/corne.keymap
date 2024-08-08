@@ -68,7 +68,7 @@
         lk_qu: lk_qu {
             compatible = "zmk,behavior-hold-tap";
             label = "LK_QU";
-            bindings = <&Qu>, <&kp>;
+            bindings = <&kp>, <&Qu>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -86,7 +86,7 @@
         };
 
         typeQ {
-            bindings = <&lk_qu 0 Q>;
+            bindings = <&lk_qu Q Q>;
             key-positions = <2 4>;
             layers = <0>;
         };
