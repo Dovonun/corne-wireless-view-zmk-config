@@ -79,7 +79,7 @@
                 <&kp G>,
                 <&macro_release>,
                 <&kp LEFT_SHIFT>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp H>;
 
             label = "GH";
@@ -184,6 +184,12 @@
             key-positions = <28 26>;
             layers = <0>;
         };
+
+        game_on {
+            bindings = <&to 4>;
+            key-positions = <38 36>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -198,10 +204,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB           &kp X          &kp W            &kp M                &kp G            &kp J              &kp HASH    &kp PERIOD           &kp SLASH                 &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp BSPC
-&mt LCTRL ESCAPE  &hrm ESCAPE S  &hrm LEFT_ALT C  &hrm LCTRL N         &hrm LEFT_WIN T  &kp K              &kp COMMA   &hrm LEFT_WIN A      &hrm LCTRL E              &hrm LEFT_ALT I    &hrm ESCAPE H     &kp SQT
-&kp LSHFT         &kp B          &kp P            &kp L                &kp D            &kp V              &kp MINUS   &kp U                &kp O                     &kp Y              &kp F             &kp ESC
-                                                  &sk_mo 1 LEFT_SHIFT  &kp R            &lt 2 BACKSPACE    &kp DELETE  &tap_hold TAB SPACE  &tap_hold ENTER C_REPEAT
+&kp TAB           &kp X          &kp W            &kp M                &kp G            &kp J              &kp LESS_THAN  &kp PERIOD           &kp SLASH                 &kp EQUAL        &kp GRAVE      &kp BSPC
+&mt LCTRL ESCAPE  &hrm ESCAPE S  &hrm LEFT_ALT C  &hrm LCTRL N         &hrm LEFT_WIN T  &kp K              &kp SEMICOLON  &hrm LEFT_WIN A      &hrm LCTRL E              &hrm LEFT_ALT I  &hrm ESCAPE H  &kp SQT
+&kp LSHFT         &kp B          &kp P            &kp L                &kp D            &kp V              &kp MINUS      &kp U                &kp O                     &kp Y            &kp F          &kp ESC
+                                                  &sk_mo 1 LEFT_SHIFT  &kp R            &lt 2 BACKSPACE    &kp DELETE     &tap_hold TAB SPACE  &tap_hold ENTER C_REPEAT
             >;
         };
 
@@ -234,6 +240,24 @@
 &trans          &trans        &trans        &trans        &trans        &trans          &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans          &trans  &trans    &trans    &trans  &trans     &trans
                                             &trans        &trans        &trans          &trans  &trans    &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&trans   &trans     &kp Q  &kp W   &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &kp B  &kp SPACE    &trans  &trans  &trans
+            >;
+        };
+
+        gaming2 {
+            bindings = <
+&trans  &kp TAB    &kp N1  &kp N2    &kp N3     &kp N4      &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z   &kp LCTRL  &kp A   &kp W     &kp D      &kp R       &trans  &trans  &trans  &trans  &trans  &trans
+&kp B   &kp LSHFT  &kp Q   &kp S     &kp E      &kp V       &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp LALT  &kp SPACE  &kp LALT    &to 0   &trans  &trans
             >;
         };
     };
