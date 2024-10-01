@@ -132,6 +132,13 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        nav_backspace_tap_dance: nav_backspace_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV_BACKSPACE_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
+        };
     };
 
     combos {
@@ -204,10 +211,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB           &kp X              &kp W            &kp M                &kp G            &kp J              &kp LESS_THAN  &kp PERIOD           &kp SLASH                 &kp EQUAL        &kp GRAVE          &kp BSPC
-&mt LCTRL ESCAPE  &hrm LEFT_SHIFT S  &hrm LEFT_ALT C  &hrm LCTRL N         &hrm LEFT_WIN T  &kp K              &kp SEMICOLON  &hrm LEFT_WIN A      &hrm LCTRL E              &hrm LEFT_ALT I  &hrm LEFT_SHIFT H  &kp SQT
-&kp LSHFT         &kp B              &kp P            &kp L                &kp D            &kp V              &kp MINUS      &kp U                &kp O                     &kp Y            &kp F              &kp ESC
-                                                      &sk_mo 1 LEFT_SHIFT  &kp R            &lt 2 BACKSPACE    &kp DELETE     &tap_hold TAB SPACE  &tap_hold ENTER C_REPEAT
+&kp TAB           &kp X              &kp W            &kp M                &kp G            &kp J                       &kp COMMA      &kp PERIOD           &kp SLASH                 &kp EQUAL        &kp GRAVE          &kp BSPC
+&mt LCTRL ESCAPE  &hrm LEFT_SHIFT S  &hrm LEFT_ALT C  &hrm LCTRL N         &hrm LEFT_WIN T  &kp K                       &kp SEMICOLON  &hrm LEFT_WIN A      &hrm LCTRL E              &hrm LEFT_ALT I  &hrm LEFT_SHIFT H  &kp SQT
+&kp LSHFT         &kp B              &kp P            &kp L                &kp D            &kp V                       &kp MINUS      &kp U                &kp O                     &kp Y            &kp F              &kp ESC
+                                                      &sk_mo 1 LEFT_SHIFT  &kp R            &nav_backspace_tap_dance    &kp DELETE     &tap_hold TAB SPACE  &tap_hold ENTER C_REPEAT
             >;
         };
 
