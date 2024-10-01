@@ -91,6 +91,27 @@
             bindings = <&kp S &kp H>;
             label = "SH";
         };
+
+        ck: ck {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp K>;
+
+            label = "CK";
+        };
+
+        pren: pren {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "PREN";
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -196,6 +217,16 @@
             bindings = <&to 4>;
             key-positions = <38 36>;
             layers = <0>;
+        };
+
+        ck {
+            bindings = <&ck>;
+            key-positions = <17 16>;
+        };
+
+        pren {
+            bindings = <&pren>;
+            key-positions = <19 20>;
         };
     };
 
