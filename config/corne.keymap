@@ -228,6 +228,16 @@
             bindings = <&pren>;
             key-positions = <19 20>;
         };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <28 27>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
