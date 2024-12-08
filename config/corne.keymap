@@ -166,6 +166,8 @@
             label = "NAV_BACKSPACE_TAP_DANCE";
             #binding-cells = <0>;
             bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <250>;
         };
     };
 
@@ -260,7 +262,7 @@
             display-name = "Base";
             bindings = <
 &kp GRAVE         &kp X              &kp W            &kp M                &kp G    &kp J                       &kp COMMA      &kp PERIOD           &kp SLASH                 &kp MINUS        &kp EQUAL          &kp BSPC
-&mt LCTRL ESCAPE  &hrm LEFT_SHIFT S  &hrm LEFT_ALT C  &hrm LEFT_META N     &lt 2 T  &kp K                       &kp SEMICOLON  &lt 2 A              &hrm RIGHT_META E         &hrm LEFT_ALT I  &hrm LEFT_SHIFT H  &kp SQT
+&mt LCTRL ESCAPE  &hrm LEFT_SHIFT S  &hrm LEFT_ALT C  &hrm LEFT_META N     &lt 2 T  &kp K                       &kp SEMICOLON  &lt 2 A              &hrm LEFT_GUI E           &hrm LEFT_ALT I  &hrm LEFT_SHIFT H  &kp SQT
 &kp LSHFT         &kp B              &kp P            &kp L                &kp D    &kp V                       &kp BACKSLASH  &kp U                &kp O                     &kp Y            &kp F              &kp ESC
                                                       &sk_mo 1 LEFT_SHIFT  &kp R    &nav_backspace_tap_dance    &kp DELETE     &tap_hold TAB SPACE  &tap_hold ENTER C_REPEAT
             >;
